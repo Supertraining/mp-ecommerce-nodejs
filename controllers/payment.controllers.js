@@ -15,7 +15,7 @@ export const createOrder = async (req, res) => {
           id: 7698,
           title: req.body.title,
           description: `Dispositivo móvil de Tienda e-commerce`,
-          picture_url: req.body.img,
+          picture_url: 'https://picsum.photos/200/300',
           quantity: +req.body.unit,
           currency_id: "ARS",
           unit_price: +req.body.price,
@@ -25,8 +25,15 @@ export const createOrder = async (req, res) => {
         name: "Lalo",
         surname: "Landa",
         email: "test_user_36961754@testuser.com",
-        phone: { Celular: "1150111375" },
-        address: { direccion: "calle falsa 123", cp: 1886 },
+        phone: {
+          area_code: "011",
+          number: "1550111375"
+          },
+        address: {
+          street_name: "calle falsa",
+          street_number: 123,
+          zip_code: "1886"
+        },
       },
       "back_urls": {
         success: 'https://supertraining-mp-commerce-nodejs.onrender.com/result',
