@@ -29,11 +29,11 @@ export const createOrder = async (req, res) => {
         address: { direccion: "calle falsa 123", cp: 1886 },
       },
       "back_urls": {
-        success: 'http://localhost:3000/result',
-        pending: 'http://localhost:3000/result',
-        failure: 'http://localhost:3000/result',
+        success: 'https://supertraining-mp-commerce-nodejs.onrender.com/result',
+        pending: 'https://supertraining-mp-commerce-nodejs.onrender.com/result',
+        failure: 'https://supertraining-mp-commerce-nodejs.onrender.com/result',
       },
-      notification_url: 'https://41dc-186-12-170-97.ngrok.io/webhook',
+      notification_url: 'https://supertraining-mp-commerce-nodejs.onrender.com/webhook',
       "payment_methods": {
         "excluded_payment_methods": [
           {
