@@ -1,22 +1,26 @@
-var express = require('express');
-var exphbs  = require('express-handlebars');
-var port = process.env.PORT || 3000
+import express from 'express'
+import exphbs from 'express-handlebars';
+import paymentRoutes from './routes/payment.routes.js';
 
-var app = express();
- 
+const port = process.env.PORT || 3000
+const deviceId = process.env.MP_DEVICE_SESSION_ID || ''
+console.log(deviceId);
+
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.use(express.static('assets'));
- 
-app.use('/assets', express.static(__dirname + '/assets'));
+app.use('/assets', express.static('./assets'));
 
-app.get('/', function (req, res) {
-    res.render('home');
+
+app.use(paymentRoutes);
+
+app.listen(port, () => {
+    console.log('Server running on port 3000');
+}).on('error', (err) => {
+    console.log('Error', err);
 });
-
-app.get('/detail', function (req, res) {
-    res.render('detail', req.query);
-});
-
-app.listen(port);
