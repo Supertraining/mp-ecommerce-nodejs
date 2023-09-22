@@ -27,7 +27,7 @@ export const createOrder = async (req, res) => {
         email: "test_user_36961754@testuser.com",
         phone: {
           area_code: "011",
-          number: "1550111375"
+          number: 1550111375
           },
         address: {
           street_name: "calle falsa",
