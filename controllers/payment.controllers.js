@@ -11,7 +11,6 @@ export const createOrder = async (req, res) => {
     const result = await mercadopago.preferences.create({
       items: [
         {
-
           id: 7698,
           title: req.body.title,
           description: `Dispositivo móvil de Tienda e-commerce`,
@@ -24,7 +23,7 @@ export const createOrder = async (req, res) => {
       payer: {
         name: "Lalo",
         surname: "Landa",
-        email: "test_user_36961754@testuser.com",
+        email: "test_user_141064751@testuser.com",
         phone: {
           area_code: "011",
           number: 1550111375
@@ -53,7 +52,7 @@ export const createOrder = async (req, res) => {
         installments: 6
       },
       auto_return: "all",
-      external_reference: "maranga_matias@hotmail.com"
+      external_reference: "test_user_831956901@testuser.com"
 
     })
     res.json(result);
