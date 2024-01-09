@@ -3,9 +3,8 @@ import mercadopago from "mercadopago";
 export const createOrder = async (req, res) => {
 
   mercadopago.configure({
-    access_token: "TEST-4126178269442276-091922-88ba0af5d4fd92eebef62a6aabbc67c9-177829481",
-
-    integrator_id: "dev_59a6893b595611ee980aaa6dfa4691a3"
+    access_token: "APP_USR-8709825494258279-092911-227a84b3ec8d8b30fff364888abeb67a-1160706432",
+    integrator_id: "dev_24c65fb163bf11ea96500242ac130004"
   });
 
   try {
